@@ -1,5 +1,5 @@
 ﻿define Y = Character("You", color="#ffffff") # This is on line 16.
-define r = Character("Reimu", color="#ff0000") # This is on line 19
+define r = Character("Reimu", color="#ff0000") # This is on line 20
 # ^ the above starts from line 16
 
 label start:
@@ -18,5 +18,25 @@ label start:
     # so you can shorten long names...
     # In color="" you can change the name’s color, such as #ffffff for white, #ff0000 for red, etc.
     r "Testing testing..." # Uppercase (Y) or lowercase (r) doesn’t matter! As long as it’s not a number~
+    
+    jump next
+    # ^ This means jump to the next label. 
+    # Very useful especially when you want to add choices using 'menu'.
+
+label next:
+# ^ If you want to jump, there must be a label to jump to!
+
+    r "Ahem... so... how about we continue to the menu?"
+
+    menu:  # Here it is! Try running this in Ren’Py and you’ll see how it works!
+        "Let's go!":
+            jump next_1 # If you choose this, it will jump to the next label.
+        "Uh... could you repeat that?":
+            jump next # If you choose this, it will jump to the same label (repeat again).
+
+## NOTE: Don’t have labels with the same name! ##
+label next_1:
+    r "Nice! You did it."
+
 
     return
