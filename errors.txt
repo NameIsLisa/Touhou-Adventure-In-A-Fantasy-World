@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 2: expected 'word' not found.
+    define 1 = Character("Si 1", color="#ff0000")
+             ^
+
+Ren'Py Version: Ren'Py 8.3.0.24082114
+Fri Aug 22 15:53:32 2025
