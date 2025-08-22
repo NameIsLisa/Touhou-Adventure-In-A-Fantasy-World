@@ -1,21 +1,22 @@
-﻿define Y = Character("You", color="#ffffff") #Ini ada di line 16. 
-define r = Character("Reimu", color="#ff0000") #Ini ada di line 19
-# ^ yang di atas dimulai dari line 16
+﻿define Y = Character("You", color="#ffffff") # This is on line 16.
+define r = Character("Reimu", color="#ff0000") # This is on line 19
+# ^ the above starts from line 16
 
 label start:
-    #di bawah ini adalah dialog-dialog!
-    "Halo, ini dialog ku!"
-    "mana dialog mu?"
+    # Below are some dialogues!
+    "Hello, this is my dialogue!"
+    "Where's your dialogue?"
 
-    #kamu juga bisa menambahkan nama karakter, tanpa itu kita tidak tau siapa yang berbicara kan?
-    "Dev""Ini aku!"
-    ## Sebelum dialog, tambahkan "" dan masukan nama didalamnya(namanya terserah kamu) 
-    ## "Dev" < nama karakter | "Ini aku!" < dialog.
+    # You can also add a character name, otherwise we won’t know who is speaking, right?
+    "Dev""It's me!"
+    ## Before the dialogue, add "" and put the name inside it (name is up to you) 
+    ## "Dev" < character name | "It’s me!" < dialogue.
 
-    # Kamu juga bisa mempersingkatnya!
-    Y "Aku kamu!" # lihat line 1
-    # define 'serah kamu' = Character("Name", color="")  mendefinisikan abjad(JANGAN ANGKA!) untuk uh... bisa dibilang mempersingkat nama yang panjang...
-    # dibagian color="" kamu bisa mengubah warna namanya, seperti #ffffff untuk putih, #ff0000 untuk merah, dll
-    r "Testing testing..." # Y(huruf besar) r(huruf kecil) itu tidak masalah! selagi bukan angka ya~
+    # You can also shorten it!
+    Y "I'm you!" # see line 1
+    # define 'whatever' = Character("Name", color="") defines a shortcut (letters ONLY, NOT numbers!) 
+    # so you can shorten long names...
+    # In color="" you can change the name’s color, such as #ffffff for white, #ff0000 for red, etc.
+    r "Testing testing..." # Uppercase (Y) or lowercase (r) doesn’t matter! As long as it’s not a number~
 
     return
