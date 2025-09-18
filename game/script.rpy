@@ -62,7 +62,7 @@ label next_2:
 
     show text "Hello!" # this one will appear on middle screen!
     "By the way...seems like you need a dialogue...uh... add a dialogue between 'show' and 'hide' so the code doesn’t immediately skip to 'hide'.." 
-    # < try deleting this dialogue, the 'show text' won’t appear (it will immediately hide). 
+    # ^ try deleting this dialogue, the 'show text' won’t appear (it will immediately hide). 
     # So make sure there’s a dialogue between 'show' and 'hide'...or...
     hide text # make sure to hide after you’re done using it.
     Y "YOOO what the-"
@@ -72,7 +72,7 @@ label next_2:
     pause 1 #this will be useful later...  
     hide text
     "hmmm...oh, it works." 
-    # Sooo as you can see, on line 71, 'pause 1' will make the game pause for 1 second, then continue automatically to the next code/dialogue.
+    # Sooo as you can see, on line 72, 'pause 1' will make the game pause for 1 second, then continue automatically to the next code/dialogue.
     "There’s a delay for the text to hide."
 
     "Dev" "Let me show you something...BUT BE CAREFUL, FLASH WARNING!"
@@ -126,5 +126,66 @@ label next_3:
     
     "Ahem..."
     # End with some dignity… or at least try to.
+    "Let's continue."
     
+    # ...Hey...on line 124 the text even popped out of the bubble, right?
+    # Because the background was dark earlier, let’s try with a brighter background.
+    scene bg_hall
+    "Done...now..."
+    "{cps=1000}AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA{/cps}" 
+    "See? The text is coming out of the bubble text."
+    "Or go to the edge of the screen instead of going down to the bottom...?"
+
+    "Meh, nvm. Let's continue."
+    "Typing...{w=1.0} wait for it...{w=2.0} ta-daaa!"
+    # ^ Here it pauses for 1 second, then 2 seconds, while still in the SAME dialogue line.
+    # {w=<number>} = wait a certain amount of seconds before continuing the text.
+    # Example: {w=1.0} will pause for 1 second while showing the dialogue.
+    
+    # {p} = pause, but instead of continuing automatically, it WAITS for you to click.
+    "First part...{p}Second part after click!"
+    # ^ The text before {p} shows up, then Ren’Py waits for your input (like pressing enter/click),
+    # THEN it shows the rest of the line.
+    
+    # Let's combine!
+    "Drama incoming...{w=1.5} dun...{w=1.5} dun...{p}DUNNNN!!!"
+    # ^ This will make a slow dramatic reveal, and then require a click to show the big DUNNNN!!!
+
+    "Hmmm {p}hellooo {p}YO ZE~"
+    # and...{p} will create a new paragraph....aka go down.
+
+    # Now, let’s have a “dignified” dialogue. (Yeah, right...)
+    "Sakuya" "{cps=25}Insert some dignified text here :){w=0.5} well, let’s just pretend it is...{p}Oh come on!{w=0.5} I’m out of ideas!"
+    
+    "{cps=100}WHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY{/cps}"
+
+    # Okay okay, let’s be serious...
+    "Sakuya" "{cps=25}As the head maid of the Scarlet Devil Mansion{w=0.5}, it is my duty to maintain both order and elegance.{/cps}"
+    "Sakuya" "{cps=25}Every task I perform within this mansion{p}I carry out with precision, grace, and unwavering dignity.{/cps}"
+
+    "{cps=5}....{/cps}"
+    "YAY I DID IT!"
+    jump next_4
+
+label next_4:
+    "Well... in Ren'Py you can also use sound."
+    play sound "sak_0335.wav"
+    # ^ 'play sound' plays a sound (music also works). 
+    # Supported formats include .wav and .mp3, but I recommend using .wav for better compatibility.
+    "Sakuya" "{cps=25}Let's dance... {w=1}until the end of this life!{/cps}" 
+    # ^ And make sure the audio files are placed inside (game -> audio)
+    stop sound # Don't forget to stop the sound, or the sound will remain even if the dialogue changes...and the first sound will be immediately replaced by the second sound.
+
+    "If you don’t stop it, this is what happens."
+    play sound "remilia.mp3"
+    play sound "sak_0335.wav"
+    "See? The sound (remilia.mp3) didn’t play, and it immediately jumped to (sak_0335.wav)." 
+    # Maybe you can use 'pause' to add a delay between sounds...
+
+    "Hey, actually you can also place image files (for example backgrounds) inside the images folder, and even if you put them inside a subfolder, it will still work! The same goes for audio."
+    # ^ This dialogue is important! Read it carefully!
+
+    "Shall we continue?"
+
     return #This will take you back to the main menu.
+
