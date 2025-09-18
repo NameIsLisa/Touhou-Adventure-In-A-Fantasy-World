@@ -62,7 +62,7 @@ label next_2:
 
     show text "Hello!" # this one will appear on middle screen!
     "By the way...seems like you need a dialogue...uh... add a dialogue between 'show' and 'hide' so the code doesn’t immediately skip to 'hide'.." 
-    # ^ try deleting this dialogue, the 'show text' won’t appear (it will immediately hide). 
+    # ^ try deleting this dialogue, the 'show text' won’t appear (it will immediately hide)... OR, use this -> '#' 
     # So make sure there’s a dialogue between 'show' and 'hide'...or...
     hide text # make sure to hide after you’re done using it.
     Y "YOOO what the-"
