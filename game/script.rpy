@@ -104,7 +104,7 @@ label next_3:
     "Alright, done."
     "Hmm..."
     "{cps=25}background done...character done...flash...yep...{/cps}"
-    # ↑ This line will display the text slowly, one character at a time,
+    # ^ This line will display the text slowly, one character at a time,
     # instead of instantly dumping the whole sentence like Ren’Py sneezing.
     # {cps=25} = Characters Per Second (25 chars appear each second).
     # {/cps} = End the effect. Without this, your next lines will also go sloooow...
@@ -116,13 +116,13 @@ label next_3:
     # The bigger the number = faster. Simple math, simple happiness.
     
     "{cps=10}Soooooooooooooooo slowwwwwwwwww....{/cps}" 
-    # ← 10 cps. Looks like the character is half asleep typing this.
+    # 10 cps. Looks like the character is half asleep typing this.
     
     "{cps=50}WOAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH FASTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT{/cps}" 
-    # ← 50 cps. Now they’re chugging 3 cups of coffee.
+    # 50 cps. Now they’re chugging 3 cups of coffee.
     
     "{cps=1000}AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA{/cps}" 
-    # ← 1000 cps. That’s not typing. That’s a text machine gun.
+    # 1000 cps. That’s not typing. That’s a text machine gun.
     
     "Ahem..."
     # End with some dignity… or at least try to.
