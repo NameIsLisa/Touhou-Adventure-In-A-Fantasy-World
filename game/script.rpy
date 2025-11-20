@@ -186,6 +186,14 @@ label next_4:
     # ^ This dialogue is important! Read it carefully!
 
     "Shall we continue?"
+    jump next_5
 
+
+label next_5:
+    "Alright, this is the final part of the tutorial."
+    "You have learned dialogues, backgrounds, sprites, menu, sound, and special text effects!"
+
+    "You can return to the main menu using 'return'."
+    
     return #This will take you back to the main menu.
 
