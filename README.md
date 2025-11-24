@@ -6,4 +6,4 @@ _(still in progres.)_
 
 ***if you find <ins>Indonesian</ins> in some codes, don't mind it.***
 
-> Mereka bilang kalau koding itu menyenangkan. Itu benar! sangat menyenangkan sampai kepalamu ingin meledak...tidak juga sih.
+> Mereka bilang kalau koding itu menyenangkan. Itu benar! Sangat menyenangkan sampai kepalamu ingin meledak...tidak juga sih.
