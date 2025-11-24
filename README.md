@@ -2,4 +2,4 @@ this is a simple Ren'py tutorial by me, some of them might be usefull in your ga
 (still in progres.)
 
 
-if you find Indonesia lang in some code, don't mind it.
+if you find Indonesian in some codes, don't mind it.
