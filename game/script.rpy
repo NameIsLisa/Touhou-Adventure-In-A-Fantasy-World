@@ -190,10 +190,14 @@ label next_4:
 
 
 label next_5:
-    "Alright, this is the final part of the tutorial."
-    "You have learned dialogues, backgrounds, sprites, menu, sound, and special text effects!"
+    "Okay, that's the basic Ren'py tutorial{p=1.5}, actually there is a tutorial from Ren'py itself haha..."
 
-    "You can return to the main menu using 'return'."
+    "That's all, in the future there are some things I want to add (like using Python) maybe..who knows, haha! see you next time!"
+
+    "By the way...you can return to the main menu using 'return'."
     
     return #This will take you back to the main menu.
 
+
+# And sorry if my vocabulary is wrong :')
+# Enjoy making your visual novel using Ren'Py!

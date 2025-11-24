@@ -1,7 +1,7 @@
 ## Tutorial + Game
 
 this is a simple **Ren'py** tutorial by me, some of them might be usefull in your game.
-_(still in progres.)_
+_(completed, for now.)_
 
 
 ***if you find <ins>Indonesian</ins> in some codes, don't mind it.***
