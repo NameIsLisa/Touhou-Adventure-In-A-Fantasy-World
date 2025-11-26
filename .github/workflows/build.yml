@@ -1,19 +1,28 @@
-name: Debug RenPy Path
+name: Build RenPy Game (Windows)
 
 on:
   workflow_dispatch:
 
 jobs:
-  debug:
+  build:
     runs-on: windows-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Show workspace structure
+      - name: Download Ren'Py SDK
         run: |
-          echo "=== Root directory ==="
-          dir $env:GITHUB_WORKSPACE
-          echo "=== game directory ==="
-          dir $env:GITHUB_WORKSPACE\game
+          curl -L -o renpy-sdk.zip https://www.renpy.org/dl/8.3.0/renpy-8.3.0-sdk.zip
+          powershell -Command "Expand-Archive renpy-sdk.zip -DestinationPath ."
+
+      - name: Build the game
+        run: |
+          cd renpy-8.3.0-sdk
+          ./renpy.exe "..\game" distribute
+
+      - name: Upload build
+        uses: actions/upload-artifact@v3
+        with:
+          name: renpy-build
+          path: renpy-8.3.0-sdk/dist/*
