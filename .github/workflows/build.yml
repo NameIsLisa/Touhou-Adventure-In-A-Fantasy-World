@@ -1,0 +1,32 @@
+name: Build RenPy Game (Windows)
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download RenPy SDK
+        run: |
+          Invoke-WebRequest -Uri "https://www.renpy.org/dl/8.2.0/renpy-8.2.0-sdk.zip" -OutFile "renpy-8.2.0-sdk.zip"
+
+      - name: Extract RenPy SDK
+        run: Expand-Archive renpy-8.2.0-sdk.zip -DestinationPath .
+
+      - name: Build Windows Distribution
+        run: |
+          cd renpy-8.2.0-sdk
+          ./renpy.exe launcher distribute "..\game"
+
+      - name: Upload Windows Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: renpy-windows-build
+          path: renpy-8.2.0-sdk/dist/*
