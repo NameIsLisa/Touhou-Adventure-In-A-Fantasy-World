@@ -19,7 +19,7 @@ jobs:
       - name: Build the game
         run: |
           cd renpy-8.3.0-sdk
-          ./renpy.exe "..\game" distribute
+          renpy.exe ..\game distribute --keep-orphans
 
       - name: Upload build
         uses: actions/upload-artifact@v4
