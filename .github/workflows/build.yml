@@ -19,10 +19,10 @@ jobs:
       - name: Build the game
         run: |
           cd renpy-8.2.0-sdk
-          ./renpy.sh launcher distribute "$GITHUB_WORKSPACE/game"
+          renpy.exe launcher distribute "$env:GITHUB_WORKSPACE/game"
 
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
           name: renpy-build
-          path: renpy-8.2.0-sdk/dist/*
+          path: renpy-8.2.0-sdk/dist/**
